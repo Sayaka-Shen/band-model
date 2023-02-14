@@ -1,0 +1,464 @@
+// FONTS
+@font-face {
+    font-family: "Lato";
+    src: url(../fonts/Lato-Regular.ttf);
+}
+
+// MIXIN
+@mixin desktop {
+    @media screen and (min-width: 576px) {
+        @content;
+    }
+}
+
+// RESETS
+* {
+    font-family: "Lato";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// MAIN SCSS
+header {
+    // NAVIGUATION STYLING
+    nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        font-size: 1.2rem;
+        background-color: black;
+        color: white;
+        
+        // i general style
+        i {
+            font-size: 1.5rem;
+        }
+
+        @include desktop {
+            align-items: center;
+        }
+
+        // NAV LIST
+        .list {
+            
+            ul {
+
+                @include desktop {
+                    display: flex;
+                }
+               
+                li {
+                    display: none;
+                    text-transform: uppercase;
+
+                    @include desktop {
+                        display: block;
+                        padding: 1rem;
+                    }
+                }
+
+                li:last-child {
+
+                    @include desktop {
+                        
+                        .dropdown {
+                            display: none;
+                        }
+                    }
+                }
+
+                .active {
+                    display: block;
+                }
+            }
+        }
+
+        // SEARCH BUTTON
+        .search {
+            display: none;
+
+            @include desktop {
+                display: block;
+                margin-right: 1rem;
+            }
+        }
+
+        // HAM BUTTON
+        .hamMenu {
+            display: flex;
+            color: white;
+            width: auto;
+
+            @include desktop {
+                display: none;
+            }
+        }
+    }
+
+    // BIG IMAGE OF THE PAGE
+    #imgHeader {
+        height: 40vh;
+        background-image: url(../img/la.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @include desktop {
+            height: 80vh;
+            background-position: bottom;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            color: white;
+        }
+
+        h2 {
+            display: none;
+
+            @include desktop {
+                display: block;
+                margin: 1rem 0;
+            }
+        }
+
+        p {
+            display: none;
+
+            @include desktop {
+                display: block;
+                margin: 0 0 2rem 0;
+            }
+        }
+    }
+}
+
+// MAIN
+main {
+
+    // SECTION THEBAND
+    #theBand {
+        width: 95%;
+        margin: 6rem auto;
+
+        @include desktop {
+            width: 55%;
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            font-weight: 100;
+            text-transform: uppercase;
+            letter-spacing: .3rem;
+            text-align: center;
+        }
+
+        h4 {
+            font-style: italic;
+            font-size: 1.2rem;
+            font-weight: 100;
+            color: gray;
+            text-align: center;
+        }
+
+        p {
+            text-align: justify;
+            margin: 1rem 0 4rem 0;
+            line-height: 1.5rem;
+            font-size: 1.1rem;
+            color: rgb(81, 81, 81);
+        }
+
+        .bandMember {
+
+            @include desktop {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .memberCard {
+                text-align: center;
+
+                @include desktop {
+                    width: 30%;
+                }
+
+                h3 {
+                    margin: 1rem;
+                }
+
+                .image {
+                    width: 70%;
+                    margin: auto;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    // SECTION TOUR DATES 
+    #tourDate {
+        padding: 6rem 1rem 3rem 1rem;
+        background-color: black;
+        color: white;
+
+        @include desktop {
+            padding: 6rem 20% 5rem 20%;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            letter-spacing: .5rem;
+            text-transform: uppercase;
+        }
+
+        p {
+            text-align: center;
+            color: gray;
+            font-style: italic;
+            margin: 1.2rem 0 2rem 0;
+            font-size: 1.1rem;
+        }
+
+        // DATES BLOCK
+        .dates {
+            background-color: white;
+            margin: 2.5rem 0;
+            
+            .date {
+
+                p {
+                    text-align: left;
+                    color: gray;
+                    font-style: normal;
+                    padding: .8rem;
+                    margin: 0;
+                    border-bottom: 1px rgba(128, 128, 128, 0.2) solid;
+
+                    span {
+                        background-color: red;
+                        color: white;
+                        padding: .3rem;
+                        margin-left: 1rem;
+                    }
+                }
+            }
+
+            .date:nth-child(3) {
+
+                p {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: .6rem .8rem;
+
+                    span {
+                        background-color: black;
+                        border-radius: 100%;
+                        padding: .1rem .6rem;
+                        margin-right: 1.5rem;
+                    }
+                }
+            }
+        }
+
+        // CITIES CARD
+        .cities {
+
+            @include desktop {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .card {
+                background-color: white;
+                color: black;
+                margin: 1.5rem 0 1rem 0;
+
+                @include desktop {
+                    width: 32%;
+                }
+
+                .image {
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                h3 {
+                    margin: 1rem;
+                    font-size: 1.1rem;
+                }
+
+                h4 {
+                    margin: 1rem;
+                    color: grey;
+                }
+
+                p {
+                    margin: 1rem;
+                    font-size: 1rem;
+                    text-align: left;
+                    font-style: normal;
+                    color: black;
+                }
+
+                button {
+                    margin: 0 0 1rem 1rem;
+                    padding: .8rem 1rem;
+                    font-size: 1.1rem;
+                    background-color: black;
+                    color: white;
+                    border: 0;
+                }
+
+            }
+        }
+    }
+}
+
+// FOOTER
+footer {
+    // CONTACT BLOCK
+    #contact {
+        margin: 6rem auto;
+        width: 95%;
+        
+        @include desktop {
+            width: 65%;
+        }
+
+        h2 {
+            letter-spacing: .3rem;
+            font-size: 2rem;
+            font-weight: 100;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        p {
+            margin: 1.5rem 0 2rem 0;
+            color: gray;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .information {
+
+            @include desktop {
+                display: flex;
+                align-items: baseline;
+                margin: 7rem 0;
+            }
+
+            .coordinates {
+                margin-bottom: 1rem;
+
+                @include desktop {
+                    width: 50%;
+                    margin: 0;
+                }
+    
+                p {
+                    margin: 0;
+                    color: black;
+                    font-style: normal;
+                    text-align: left;
+                    font-size: 1.3rem;
+    
+                    i {
+                        padding-right: .8rem;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+    
+            form {
+                margin-bottom: 10rem;
+
+                @include desktop {
+                    width: 50%;
+                    margin: 0;
+                }
+    
+                .both {
+    
+                    @include desktop {
+                        display: flex;
+                        justify-content: space-between;
+    
+                        div {
+                            width: 49%;
+                        }
+                    }
+                }
+    
+                div {
+    
+                    input {
+                        width: 100%;
+                        font-size: 1.2rem;
+                        padding: .8rem;
+                        margin: .5rem 0;
+                        border: 1px solid rgba(128, 128, 128, 0.4);
+                    }
+    
+                    input[type=submit] {
+                        width: auto;
+                        float: right;
+                        color: white;
+                        padding: .8rem 1.2rem;
+                        background-color: black;
+                        border: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    // MAP
+    .map {
+
+        iframe {
+            height: 40vh;
+            width: 100%;
+
+            @include desktop {
+                height: 80vh;
+            }
+        }
+    }
+
+    // FOOTER FOR REAL
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: gray;
+        margin: 6rem 0;
+
+        div {
+            font-size: 1.2rem;
+
+            a {
+                color: gray;
+            }
+        }
+
+        .icon {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+    }
+}
+

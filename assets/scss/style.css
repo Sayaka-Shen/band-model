@@ -1,0 +1,368 @@
+@font-face {
+  font-family: "Lato";
+  src: url(../fonts/Lato-Regular.ttf);
+}
+* {
+  font-family: "Lato";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-size: 1.2rem;
+  background-color: black;
+  color: white;
+}
+header nav i {
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 576px) {
+  header nav {
+    align-items: center;
+  }
+}
+@media screen and (min-width: 576px) {
+  header nav .list ul {
+    display: flex;
+  }
+}
+header nav .list ul li {
+  display: none;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 576px) {
+  header nav .list ul li {
+    display: block;
+    padding: 1rem;
+  }
+}
+@media screen and (min-width: 576px) {
+  header nav .list ul li:last-child .dropdown {
+    display: none;
+  }
+}
+header nav .list ul .active {
+  display: block;
+}
+header nav .search {
+  display: none;
+}
+@media screen and (min-width: 576px) {
+  header nav .search {
+    display: block;
+    margin-right: 1rem;
+  }
+}
+header nav .hamMenu {
+  display: flex;
+  color: white;
+  width: auto;
+}
+@media screen and (min-width: 576px) {
+  header nav .hamMenu {
+    display: none;
+  }
+}
+header #imgHeader {
+  height: 40vh;
+  background-image: url(../img/la.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 576px) {
+  header #imgHeader {
+    height: 80vh;
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+  }
+}
+header #imgHeader h2 {
+  display: none;
+}
+@media screen and (min-width: 576px) {
+  header #imgHeader h2 {
+    display: block;
+    margin: 1rem 0;
+  }
+}
+header #imgHeader p {
+  display: none;
+}
+@media screen and (min-width: 576px) {
+  header #imgHeader p {
+    display: block;
+    margin: 0 0 2rem 0;
+  }
+}
+
+main #theBand {
+  width: 95%;
+  margin: 6rem auto;
+}
+@media screen and (min-width: 576px) {
+  main #theBand {
+    width: 55%;
+  }
+}
+main #theBand h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  text-align: center;
+}
+main #theBand h4 {
+  font-style: italic;
+  font-size: 1.2rem;
+  font-weight: 100;
+  color: gray;
+  text-align: center;
+}
+main #theBand p {
+  text-align: justify;
+  margin: 1rem 0 4rem 0;
+  line-height: 1.5rem;
+  font-size: 1.1rem;
+  color: rgb(81, 81, 81);
+}
+@media screen and (min-width: 576px) {
+  main #theBand .bandMember {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+main #theBand .bandMember .memberCard {
+  text-align: center;
+}
+@media screen and (min-width: 576px) {
+  main #theBand .bandMember .memberCard {
+    width: 30%;
+  }
+}
+main #theBand .bandMember .memberCard h3 {
+  margin: 1rem;
+}
+main #theBand .bandMember .memberCard .image {
+  width: 70%;
+  margin: auto;
+}
+main #theBand .bandMember .memberCard .image img {
+  width: 100%;
+}
+main #tourDate {
+  padding: 6rem 1rem 3rem 1rem;
+  background-color: black;
+  color: white;
+}
+@media screen and (min-width: 576px) {
+  main #tourDate {
+    padding: 6rem 20% 5rem 20%;
+  }
+}
+main #tourDate h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+}
+main #tourDate p {
+  text-align: center;
+  color: gray;
+  font-style: italic;
+  margin: 1.2rem 0 2rem 0;
+  font-size: 1.1rem;
+}
+main #tourDate .dates {
+  background-color: white;
+  margin: 2.5rem 0;
+}
+main #tourDate .dates .date p {
+  text-align: left;
+  color: gray;
+  font-style: normal;
+  padding: 0.8rem;
+  margin: 0;
+  border-bottom: 1px rgba(128, 128, 128, 0.2) solid;
+}
+main #tourDate .dates .date p span {
+  background-color: red;
+  color: white;
+  padding: 0.3rem;
+  margin-left: 1rem;
+}
+main #tourDate .dates .date:nth-child(3) p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0.8rem;
+}
+main #tourDate .dates .date:nth-child(3) p span {
+  background-color: black;
+  border-radius: 100%;
+  padding: 0.1rem 0.6rem;
+  margin-right: 1.5rem;
+}
+@media screen and (min-width: 576px) {
+  main #tourDate .cities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+main #tourDate .cities .card {
+  background-color: white;
+  color: black;
+  margin: 1.5rem 0 1rem 0;
+}
+@media screen and (min-width: 576px) {
+  main #tourDate .cities .card {
+    width: 32%;
+  }
+}
+main #tourDate .cities .card .image img {
+  width: 100%;
+}
+main #tourDate .cities .card h3 {
+  margin: 1rem;
+  font-size: 1.1rem;
+}
+main #tourDate .cities .card h4 {
+  margin: 1rem;
+  color: grey;
+}
+main #tourDate .cities .card p {
+  margin: 1rem;
+  font-size: 1rem;
+  text-align: left;
+  font-style: normal;
+  color: black;
+}
+main #tourDate .cities .card button {
+  margin: 0 0 1rem 1rem;
+  padding: 0.8rem 1rem;
+  font-size: 1.1rem;
+  background-color: black;
+  color: white;
+  border: 0;
+}
+
+footer #contact {
+  margin: 6rem auto;
+  width: 95%;
+}
+@media screen and (min-width: 576px) {
+  footer #contact {
+    width: 65%;
+  }
+}
+footer #contact h2 {
+  letter-spacing: 0.3rem;
+  font-size: 2rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  text-align: center;
+}
+footer #contact p {
+  margin: 1.5rem 0 2rem 0;
+  color: gray;
+  font-style: italic;
+  text-align: center;
+}
+@media screen and (min-width: 576px) {
+  footer #contact .information {
+    display: flex;
+    align-items: baseline;
+    margin: 7rem 0;
+  }
+}
+footer #contact .information .coordinates {
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 576px) {
+  footer #contact .information .coordinates {
+    width: 50%;
+    margin: 0;
+  }
+}
+footer #contact .information .coordinates p {
+  margin: 0;
+  color: black;
+  font-style: normal;
+  text-align: left;
+  font-size: 1.3rem;
+}
+footer #contact .information .coordinates p i {
+  padding-right: 0.8rem;
+  font-size: 1.2rem;
+}
+footer #contact .information form {
+  margin-bottom: 10rem;
+}
+@media screen and (min-width: 576px) {
+  footer #contact .information form {
+    width: 50%;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 576px) {
+  footer #contact .information form .both {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer #contact .information form .both div {
+    width: 49%;
+  }
+}
+footer #contact .information form div input {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 1px solid rgba(128, 128, 128, 0.4);
+}
+footer #contact .information form div input[type=submit] {
+  width: auto;
+  float: right;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  background-color: black;
+  border: 0;
+}
+footer .map iframe {
+  height: 40vh;
+  width: 100%;
+}
+@media screen and (min-width: 576px) {
+  footer .map iframe {
+    height: 80vh;
+  }
+}
+footer .footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+  margin: 6rem 0;
+}
+footer .footer div {
+  font-size: 1.2rem;
+}
+footer .footer div a {
+  color: gray;
+}
+footer .footer .icon {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}/*# sourceMappingURL=style.css.map */
